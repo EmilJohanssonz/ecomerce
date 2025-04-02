@@ -48,7 +48,7 @@ export const Carousel = ({ products }: CarouselProps) => {
         </CardTitle>
         {price?.unit_amount && (
           <p className="text-lg text-black font-semibold mt-2">
-            £{(price.unit_amount / 100).toFixed(2)}
+            {(price.unit_amount / 100).toFixed(2)}€
           </p>
         )}
       </CardContent>
