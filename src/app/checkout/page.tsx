@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "../../../store/cart-store";
 import { Button } from "@/components/ui/button";
+import { CheckoutAction } from "./checkout-action";
 
 export default function CheckoutPage() {
-  const { items, addItem, removeItem } = useCartStore();
+  const { items, addItem, removeItem , clearCart} = useCartStore();
   const [removingItemId, setRemovingItemId] = useState<string | null>(null);
 
   const total = items.reduce(
@@ -76,7 +77,7 @@ export default function CheckoutPage() {
                     variant="outline"
                     className="px-4 py-2 text-xl"
                     onClick={() => handleAddItem(item)}
-                    disabled={item.quantity > 0} // Disable the "+" button if the item is already in the cart
+                    disabled={item.quantity > 0}
                   >
                     +
                   </Button>
@@ -84,14 +85,22 @@ export default function CheckoutPage() {
               </li>
             ))}
           </ul>
-          <div className="mt-6 text-right">
+          <form action={CheckoutAction} className="mt-6 text-right">
+            <input type="hidden" name="items" value={JSON.stringify(items)} />
             <p className="text-xl font-bold">
               Total: {(total / 100).toFixed(2)}€
             </p>
             <Button className="mt-4 w-full bg-black text-white py-2">
               Proceed to Payment
             </Button>
-          </div>
+            <Button
+              onClick={() => clearCart()}
+              variant="default"
+              className="mt-4 w-full bg-red-600 text-white py-2"
+            >
+              Clear Cart
+            </Button>
+          </form>
         </CardContent>
       </Card>
     </div>

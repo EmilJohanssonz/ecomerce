@@ -10,7 +10,7 @@ export default async function ProductPage() {
   return (
     <div className="pb-8">
       <h1 className="text-3xl font-bold font-mono leading-none tracking-light text-foreground text-center mb-8">
-       Luxury Cars
+        LuxeCars
       </h1>
       <ProductList products={products.data} />
     </div>

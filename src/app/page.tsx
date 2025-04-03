@@ -17,7 +17,7 @@ export default async function Home() {
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 items-center gap-8 px-8 sm:px-16">
           <div className="max-w-md space-y-4">
             <h2 className="text-3xl font-bold tracking-light md:text-4xl">
-              Welcome to EcoMera
+              Welcome to LuxeCars
             </h2>
             <p className="text-neutral-600">The best selling sport car.</p>
             <Button
@@ -43,7 +43,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="py-8">
-        <Carousel products={products.data}/>
+        <Carousel products={products.data} />
       </section>
     </div>
   );
