@@ -26,7 +26,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         )}
         <CardHeader className="p-5 bg-white">
-          <CardTitle className="text-2xl font-semibold text-gray-900 mb-2">
+          <CardTitle className="text-2xl font-semibold text-gray-900 mb-2 text-center border-b-2 border-gray-300">
             {product.name}
           </CardTitle>
           <CardContent className="p-4 flex-grow flex flex-col justify-between">

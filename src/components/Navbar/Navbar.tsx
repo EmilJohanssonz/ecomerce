@@ -32,9 +32,17 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow">
+    <nav
+      className="sticky top-0 z-50"
+style={{
+  background: "linear-gradient(to bottom, #f8f8f8, #e6e6e6)",
+  border: "1px solid rgba(255, 255, 255, 0.2)",
+  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+
+      }}
+    >
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link href="/" className="hover:text-blue-600">
+        <Link href="/" className="hover:text-gray-400 font-mono text-lg">
           LuxeCars
         </Link>
         {/* Desktop Navigation */}
@@ -43,7 +51,7 @@ const NavBar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="hover:text-blue-600"
+              className="hover:text-gray-400"
             >
               {link.label}
             </Link>

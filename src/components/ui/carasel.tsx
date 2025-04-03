@@ -30,7 +30,12 @@ export const Carousel = ({ products }: CarouselProps) => {
   const price = currentProduct.default_price as Stripe.Price;
 
   return (
-    <Card className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-200 transition-transform duration-300 hover:scale-105 p-4">
+    <Card
+      className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-200 transition-transform duration-300 hover:scale-105 p-4"
+      style={{
+        background: "linear-gradient(to bottom, #f8f8f8, #e6e6e6)",
+      }}
+    >
       {currentProduct.images?.[0] && (
         <div className="relative w-full h-[30rem]">
           <Image

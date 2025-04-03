@@ -13,10 +13,17 @@ export default async function Home() {
   console.log(products);
   return (
     <div>
-      <section className="rounded bg-neutral-100 py-8 sm:py-12">
+      <section
+        className="rounded  py-8 sm:py-12"
+        style={{
+          background: "linear-gradient(to bottom, #f8f8f8, #e6e6e6)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        }}
+      >
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 items-center gap-8 px-8 sm:px-16">
           <div className="max-w-md space-y-4">
-            <h2 className="text-3xl font-bold tracking-light md:text-4xl">
+            <h2 className="text-3xl font-bold font-mono  tracking-light md:text-4xl">
               Welcome to LuxeCars
             </h2>
             <p className="text-neutral-600">The best selling sport car.</p>
@@ -27,7 +34,7 @@ export default async function Home() {
             >
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center rounded-full px-6 py-3"
+                className="bg-gray-200 text-gray-800 shadow-md hover:bg-gray-300 transition-all duration-300"
               >
                 Browse all products
               </Link>
