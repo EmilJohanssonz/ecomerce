@@ -17,7 +17,7 @@ export const Footer = () => {
           LuxeCars
         </div>
 
-        <div className="flex flex-col justify-center md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center">
+        <div className="flex flex-col justify-center md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center pl-27">
           <Link
             href="/"
             className="text-gray-600 hover:text-gray-800 transition duration-300"

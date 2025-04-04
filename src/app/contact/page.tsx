@@ -16,9 +16,9 @@ const ContactForm = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000); 
+    setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
@@ -30,7 +30,13 @@ const ContactForm = () => {
         We'd love to hear from you! Fill out the form below.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6"
+        action="https://formsubmit.co/emil.hakanzon@gmail.com"
+        method="POST"
+        target="_blank"
+      >
         <div>
           <label className="block text-gray-700 font-medium">Name</label>
           <input
