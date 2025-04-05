@@ -5,7 +5,7 @@ import { Card, CardContent, CardTitle } from "./card";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-interface CarouselProps {
+ export interface CarouselProps {
   products: Stripe.Product[];
 }
 

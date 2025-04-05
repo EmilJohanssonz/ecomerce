@@ -4,6 +4,7 @@ import {
   ShoppingCartIcon,
   Bars3Icon,
   XMarkIcon,
+  UserIcon,
 } from "@heroicons/react/24/outline";
 import { useCartStore } from "../../../store/cart-store";
 import { useEffect, useState } from "react";
@@ -13,6 +14,7 @@ const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const { items } = useCartStore();
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,11 +36,10 @@ const NavBar = () => {
   return (
     <nav
       className="sticky top-0 z-50"
-style={{
-  background: "linear-gradient(to bottom, #f8f8f8, #e6e6e6)",
-  border: "1px solid rgba(255, 255, 255, 0.2)",
-  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-
+      style={{
+        background: "linear-gradient(to bottom, #f8f8f8, #e6e6e6)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
@@ -58,6 +59,9 @@ style={{
           ))}
         </div>
         <div className="flex items-center space-x-4">
+          <Link href="/login">
+            <UserIcon className="h-6 w-6" />
+          </Link>
           <Link href="/checkout" className="relative">
             <ShoppingCartIcon className="h-6 w-6" />
             {cartCount > 0 && (
