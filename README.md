@@ -33,6 +33,37 @@ This project is created as an educational tool to dive deeper into the world of 
 # 📂 Project Structure
 ecomerce/
 
+<details>
+<summary>Click to view the full folder structure</summary>
+
+.
+├── .next/                  # Compiled output from Next.js (auto-generated)
+├── node_modules/           # Project dependencies (auto-generated)
+├── public/                 # Static files (images, icons, etc.)
+├── src/                    # Application source code
+│   ├── app/                # App Router structure (Next.js 13+)
+│   │   ├── checkout/       # Checkout flow
+│   │   ├── contact/        # Contact page
+│   │   ├── login/          # Authentication page
+│   │   ├── products/       # Product listings and details
+│   │   ├── success/        # Success/confirmation page
+│   │   ├── favicon.ico     # Website icon
+│   │   ├── globals.css     # Global styles
+│   │   ├── layout.tsx      # Application root layout
+│   │   └── page.tsx        # Landing (home) page
+│   ├── components/         # Reusable components
+│   │   ├── footer/         # Footer components
+│   │   ├── Navbar/         # Navigation components
+│   │   └── ui/             # Generic UI elements (buttons, inputs, etc.)
+│   ├── lib/                # Utility functions and custom hooks
+│   └── store/              # Global state management
+│       └── cart-store.ts   # Cart logic and store (e.g. Zustand or similar)
+├── .env                    # Environment configuration
+└── .gitignore              # Files and folders ignored by Git
+
+
+</details>
+
 ---
 
 # 📸 Screenshots
